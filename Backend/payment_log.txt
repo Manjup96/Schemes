@@ -1,0 +1,63 @@
+{
+    "razorpay_payment_id": "pay_Q2dgBWGdtS8mRE",
+    "razorpay_order_id": "order_Q2dfnIPYIK7UH5",
+    "razorpay_signature": "24960a9505e4f23b0ce56b2ac2ecd5f8daea414409124d1a90c2e59a578ed9f2",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart Daily Silver Savings Scheme",
+    "saving_amount": "1",
+    "installment_amount": 0
+}
+{
+    "razorpay_payment_id": "pay_Q33aXmb83TmZG4",
+    "razorpay_order_id": "order_Q33aFGnXtByMHn",
+    "razorpay_signature": "bffd5fd852bb3e163f8df67f5260d76d189eaadcd20db6d84fbdc56d17de8312",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart 11-Month Direct Purchase Plan",
+    "saving_amount": "1",
+    "installment_amount": 0
+}
+{
+    "razorpay_payment_id": "pay_Q33i4dhM3zdqXK",
+    "razorpay_order_id": "order_Q33hc1uTgYs3jX",
+    "razorpay_signature": "0a766cf06c2a2c50a0a44a876730d8fc4b8a12f32c10137025e0186c42535dc5",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart Daily Gold and Silver Savings Scheme",
+    "saving_amount": "1",
+    "installment_amount": 0
+}
+{
+    "razorpay_payment_id": "pay_Q33j5TaS2r9EEO",
+    "razorpay_order_id": "order_Q33iqo0vz1AuRh",
+    "razorpay_signature": "df1b63db0e191accf8b2aa8af2ead185c8a5ae96c9b7fcb4eaf8dec414c69e27",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart 11-Month Direct Purchase Plan",
+    "saving_amount": "1",
+    "installment_amount": 0
+}
+{
+    "razorpay_payment_id": "pay_Q344moxgiQV2q4",
+    "razorpay_order_id": "order_Q344LzwdiBCqj4",
+    "razorpay_signature": "67175dbc2097be9b854de79899c8ae450ca0d3b92c3d3e0074ca6df358058e94",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart 11-Month Direct Purchase Plan",
+    "saving_amount": 0,
+    "installment_amount": 1
+}
+{
+    "razorpay_payment_id": "pay_Q34Vr8zV32p11D",
+    "razorpay_order_id": "order_Q34VTt6u1hzz82",
+    "razorpay_signature": "cdcf97d0bd0215986bbfe7c9146aeab969ece57f44e874e4a92f73a8927ac164",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart Daily Gold and Silver Savings Scheme",
+    "saving_amount": 1,
+    "installment_amount": 0
+}
+{
+    "razorpay_payment_id": "pay_Q34XT8j69aokI4",
+    "razorpay_order_id": "order_Q34XF6LVkot6Yi",
+    "razorpay_signature": "c4a31e5e76e7356b6f5f41ee1d5a6d5203d1f88cfa9e6c00fcb2fc0f04ba4204",
+    "user_id": "1",
+    "scheme": "Sad\u0101Shr\u012b Jewelkart 11-Month Direct Purchase Plan",
+    "saving_amount": 0,
+    "installment_amount": 1
+}
