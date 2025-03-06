@@ -1,0 +1,73 @@
+/* Hero Section */
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* About Us Section */
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Collection Section */
+.collection-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Collection Items */
+.collection-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Collection Item */
+.collection-item {
+  width: 250px;
+  height: 350px; /* Ensure uniform height for all items */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Uniform Image Styling */
+.collection-item img {
+  width: 100%;
+  height: 250px; /* Ensures all images have the same height */
+  object-fit: cover; /* Prevents distortion */
+  border-radius: 10px;
+}
+
+/* Hover Effect */
+.collection-item:hover {
+  transform: scale(1.05);
+}
+
+/* Collection Item Title */
+.collection-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d32f2f;
+  font-weight: bold;
+}

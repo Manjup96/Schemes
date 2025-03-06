@@ -69,18 +69,18 @@ const SavingPlan = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!userData || !selectedScheme) {
       alert("Please select a valid scheme and enter details.");
       return;
     }
-  
+
     let amount = parseFloat(savingAmount);
     if (isNaN(amount) || amount <= 0) {
       alert("Please enter a valid amount.");
       return;
     }
-  
+
     const isInstallmentScheme = installmentSchemes.includes(selectedScheme);
     const requestData = {
       user_id: userData.id,
@@ -89,50 +89,38 @@ const SavingPlan = () => {
       installment_amount: isInstallmentScheme ? amount : 0,
       auto_pay: autoPay ? 1 : 0,
     };
-  
+
     try {
-      const response = await fetch("http://127.0.0.1/Schemes/Backend/createOrder.php", {
-        method: "POST",
-        body: JSON.stringify(requestData),
-        headers: { "Content-Type": "application/json" },
-      });
-  
-      const data = await response.json();
-  
-      if (data.status === "success") {
-        let options = {
+      const response = await axios.post("http://127.0.0.1/Schemes/Backend/createOrder.php", requestData);
+
+      if (response.data.status === "success") {
+        const options = {
           key: "rzp_live_VXenWuBxkeRLy6",
-          amount: data.amount * 100,
+          amount: response.data.amount * 100,
           currency: "INR",
-          order_id: data.order_id,
           name: "SadāShrī Jewelkart",
+          order_id: response.data.order_id,
           handler: async function (response) {
             try {
-              const verifyResponse = await fetch("http://127.0.0.1/Schemes/Backend/verifyPayment.php", {
-                method: "POST",
-                body: JSON.stringify({
-                  razorpay_payment_id: response.razorpay_payment_id,
-                  razorpay_order_id: response.razorpay_order_id,
-                  razorpay_signature: response.razorpay_signature,
-                  user_id: userData.id,
-                  scheme: selectedScheme,
-                  saving_amount: requestData.saving_amount,
-                  installment_amount: requestData.installment_amount,
-                  auto_pay: autoPay ? 1 : 0,
-                }),
-                headers: { "Content-Type": "application/json" },
+              const verifyResponse = await axios.post("http://127.0.0.1/Schemes/Backend/verifyPayment.php", {
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+                user_id: userData.id,
+                scheme: selectedScheme,
+                saving_amount: requestData.saving_amount,
+                installment_amount: requestData.installment_amount,
+                auto_pay: autoPay ? 1 : 0,
               });
-  
-              const verifyData = await verifyResponse.json();
-  
-              if (verifyData.status === "success") {
+
+              if (verifyResponse.data.status === "success") {
                 setHasHistory(true);
                 alert("Payment successful! Transaction saved.");
                 if (autoPay) {
                   scheduleAutoPayments(userData.id, amount);
                 }
               } else {
-                alert("Payment verification failed: " + verifyData.message);
+                alert("Payment verification failed: " + verifyResponse.data.message);
               }
             } catch (error) {
               console.error("Verification error:", error);
@@ -141,17 +129,16 @@ const SavingPlan = () => {
           prefill: { name: userData.name, email: userData.email, contact: mobile },
           theme: { color: "#3399cc" },
         };
-  
-        let rzp = new window.Razorpay(options);
-        rzp.open();
+
+        const rzp1 = new window.Razorpay(options);
+        rzp1.open();
       } else {
-        alert(data.message);
+        alert(response.data.message);
       }
     } catch (error) {
       console.error("Transaction error:", error);
     }
   };
-  
 
   return (
     <div className="container">

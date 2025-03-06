@@ -1,0 +1,183 @@
+/* ✅ Container Styling */
+.container {
+  max-width: 1300px; /* ✅ Fixed width for consistency */
+  margin: auto;
+  padding: 20px;
+}
+
+/* ✅ Schemes Heading */
+.scheme-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ✅ Card Container: Ensures spacing between scheme cards */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* ✅ Adds spacing between each scheme card */
+}
+
+/* ✅ Style for Each Scheme Card (Fixed Width, No Expansion) */
+.scheme-card {
+  width: 1300px; /* ✅ Fixed width */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* ✅ Ensures Left Alignment */
+  border-left: 5px solid #007bff; /* ✅ Left border for better visibility */
+  overflow: hidden; /* ✅ Prevents content from affecting card size */
+  transition: box-shadow 0.2s ease-in-out;
+  max-height: fit-content; /* ✅ Prevents unwanted expansion */
+}
+
+/* ✅ Hover Effect on Card (NO EXPANSION) */
+.scheme-card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Prevents Expansion on "Read More" */
+.scheme-details {
+  max-width: 1250px; /* ✅ Fixed width for content inside card */
+  overflow: hidden;
+}
+
+/* ✅ Features & Terms List Styling */
+.features-list,
+.terms-list {
+  padding-left: 20px;
+  margin-top: 5px;
+  list-style-type: disc;
+}
+
+/* ✅ Style for List Items */
+.features-list li,
+.terms-list li {
+  margin-bottom: 5px;
+  color: #444;
+  text-align: left; /* ✅ Ensures Left Alignment for List Items */
+  line-height: 1.5;
+}
+
+/* ✅ Read More / Read Less Button */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Join Button */
+.join-btn {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.join-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ✅ Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* ✅ Modal Title */
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* ✅ Modal Buttons */
+.modal-content button {
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-content .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-content .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.modal-content .btn-danger {
+  background-color: red;
+  color: white;
+}
+
+.modal-content .btn-danger:hover {
+  background-color: darkred;
+}
+
+/* ✅ Loading Text */
+.loading-text {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1350px) {
+  .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .scheme-card {
+    width: 100%;
+    max-width: 1300px;
+  }
+
+  .scheme-details {
+    max-width: 1200px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
